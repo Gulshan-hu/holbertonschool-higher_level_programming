@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-"""4-print_square module"""
+"""Module that prints a square with the character #."""
 
 
 def print_square(size):
-    """Print a square with the character #."""
+    """Prints a square with the character #.
 
+    Args:
+        size (int): size of the square.
+
+    Raises:
+        TypeError: if size is not an integer.
+        ValueError: if size is less than 0.
+    """
     if not isinstance(size, int):
-        raise TypeError("size must be an integer")
-
-    if isinstance(size, bool):
         raise TypeError("size must be an integer")
 
     if size < 0:
         raise ValueError("size must be >= 0")
-
-    if size == 0:
-        print("")
-        return
 
     for _ in range(size):
         print("#" * size)
