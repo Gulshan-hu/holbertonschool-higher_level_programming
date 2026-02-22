@@ -13,17 +13,17 @@ Holberton School
 Case: Holberton.School
 >>> text_indentation("Holberton.School")
 Holberton.
-
+<BLANKLINE>
 School
 
 Case: Holberton. School? How are you: John
 >>> text_indentation("Holberton. School? How are you: John")
 Holberton.
-
+<BLANKLINE>
 School?
-
+<BLANKLINE>
 How are you:
-
+<BLANKLINE>
 John
 
 Case: 12 -> TypeError
