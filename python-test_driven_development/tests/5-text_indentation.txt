@@ -1,0 +1,32 @@
+The ``5-text_indentation`` module
+=================================
+
+Using ``text_indentation``
+--------------------------
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Case: Holberton School
+>>> text_indentation("Holberton School")
+Holberton School
+
+Case: Holberton.School
+>>> text_indentation("Holberton.School")
+Holberton.
+
+School
+
+Case: Holberton. School? How are you: John
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+
+School?
+
+How are you:
+
+John
+
+Case: 12 -> TypeError
+>>> text_indentation(12)
+Traceback (most recent call last):
+TypeError: text must be a string
