@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Module that defines print_square."""
+"""Defines print_square."""
 
 
 def print_square(size):
-    """Prints a square with the character #.
+    """Print a square with #.
 
     Args:
         size (int): size of the square.
