@@ -1,18 +1,15 @@
 #!/usr/bin/python3
 """
-This module contains the function text_indentation.
+Module that contains text_indentation function.
 """
 
 
-def text_indentation(text):
+def text_indentation(text=None):
     """
     Prints a text with 2 new lines after each of these characters: ., ? and :
 
-    Args:
-        text (str): The text to print.
-
     Raises:
-        TypeError: If text is not a string.
+        TypeError: if text is not a string
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
