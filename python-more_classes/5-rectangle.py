@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class and prints a message when an instance is deleted."""
+"""Defines a Rectangle class.
+
+Prints a message when an instance is deleted.
+"""
 
 
 class Rectangle:
@@ -60,9 +63,11 @@ class Rectangle:
         return "\n".join(rows)
 
     def __repr__(self):
-        """Return string that can recreate this object using eval()."""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        """Return string representation for eval()."""
+        return "Rectangle({}, {})".format(
+            self.__width, self.__height
+        )
 
     def __del__(self):
-        """Print a message when an instance is deleted."""
+        """Print message when instance is deleted."""
         print("Bye rectangle...")
