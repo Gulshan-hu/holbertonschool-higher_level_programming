@@ -1,24 +1,16 @@
 #!/usr/bin/python3
-"""
-7-base_geometry modulu
-Bu modul BaseGeometry sinfini təyin edir.
-"""
+"""BaseGeometry modulu üçün docstring"""
 
 
 class BaseGeometry:
     """BaseGeometry sinfi"""
 
     def area(self):
-        """area metodunun hələ tətbiq olunmadığını bildirir"""
+        """area metodu implementasiya olunmayıb"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """
-        Dəyəri integer və 0-dan böyük olub-olmamasına görə yoxlayır.
-        Args:
-            name (str): Parametrin adı.
-            value (int): Yoxlanılacaq dəyər.
-        """
+        """Dəyəri yoxlayır: integer və > 0 olmalıdır"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
