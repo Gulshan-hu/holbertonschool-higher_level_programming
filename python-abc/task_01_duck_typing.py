@@ -1,26 +1,24 @@
 #!/usr/bin/env python3
-"""Shapes, interfaces, and duck typing with ABCs."""
+"""Shapes, Interfaces, and Duck Typing."""
 
 from abc import ABC, abstractmethod
 from math import pi
 
 
 class Shape(ABC):
-    """Abstract base class that defines the Shape interface."""
+    """Abstract Shape interface."""
 
     @abstractmethod
     def area(self):
-        """Return the area of the shape."""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """Return the perimeter of the shape."""
         pass
 
 
 class Circle(Shape):
-    """Concrete Circle implementation of Shape."""
+    """Circle implementation."""
 
     def __init__(self, radius):
         self.radius = radius
@@ -33,7 +31,7 @@ class Circle(Shape):
 
 
 class Rectangle(Shape):
-    """Concrete Rectangle implementation of Shape."""
+    """Rectangle implementation."""
 
     def __init__(self, width, height):
         self.width = width
@@ -47,9 +45,6 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """
-    Print area and perimeter of a shape using duck typing.
-    No isinstance checks: relies on shape having area() and perimeter().
-    """
-    print("Area:", shape.area())
-    print("Perimeter:", shape.perimeter())
+    """Print area and perimeter using duck typing (no isinstance checks)."""
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
