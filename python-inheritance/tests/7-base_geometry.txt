@@ -1,13 +1,14 @@
 integer_validator()
 integer_validator("age")
-integer_validator(“age”)
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
+# valid cases (no output expected)
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 
+# wrong type cases
 >>> bg.integer_validator("age", "4")
 Traceback (most recent call last):
 ...
@@ -38,6 +39,7 @@ Traceback (most recent call last):
 ...
 TypeError: age must be an integer
 
+# invalid numeric values
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ...
@@ -48,6 +50,7 @@ Traceback (most recent call last):
 ...
 ValueError: age must be greater than 0
 
+# area must raise exception
 >>> bg.area()
 Traceback (most recent call last):
 ...
