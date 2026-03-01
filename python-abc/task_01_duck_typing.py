@@ -51,5 +51,5 @@ def shape_info(shape):
     Print area and perimeter of a shape using duck typing.
     No isinstance checks: relies on shape having area() and perimeter().
     """
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+    print("Area:", shape.area())
+    print("Perimeter:", shape.perimeter())
