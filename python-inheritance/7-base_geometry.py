@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-"""BaseGeometry sinfi üçün modul"""
+"""
+7-base_geometry modulu
+Bu modul BaseGeometry sinfini saxlayır.
+"""
 
 
 class BaseGeometry:
     """BaseGeometry sinfi"""
 
     def area(self):
-        """area() metodunun implementasiya olunmadığını bildirir"""
+        """area() metodu hələ tətbiq olunmayıb"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Dəyərin tam ədəd və 0-dan böyük olmasını yoxlayır
+        """
+        Dəyəri yoxlayır (integer və > 0 olmalıdır).
         Args:
-            name (str): Parametrin adı (həmişə string fərz edilir)
-            value (int): Yoxlanılacaq dəyər
-        Raises:
-            TypeError: value integer deyilsə
-            ValueError: value <= 0 olarsa
+            name (str): Parametrin adı.
+            value (int): Yoxlanılacaq dəyər.
         """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
