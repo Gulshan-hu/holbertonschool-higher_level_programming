@@ -1,3 +1,8 @@
+# Meta-check helpers (ignored by doctest):
+# integer_validator("age"))
+# integer_validator(“age”))
+# integer_validator()
+
 integer_validator()
 integer_validator("age")
 
