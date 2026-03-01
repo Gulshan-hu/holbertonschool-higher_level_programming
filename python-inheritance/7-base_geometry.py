@@ -1,29 +1,24 @@
 #!/usr/bin/python3
-"""Defines the BaseGeometry class.
-
-This module is part of the Holberton/ALX Python - Inheritance project.
-"""
+"""BaseGeometry sinfi üçün modul"""
 
 
 class BaseGeometry:
-    """Base class for geometry-related classes."""
+    """BaseGeometry sinfi"""
 
     def area(self):
-        """Raises an Exception because area is not implemented."""
+        """area() metodunun implementasiya olunmadığını bildirir"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validates that *value* is a positive integer.
-
+        """Dəyərin tam ədəd və 0-dan böyük olmasını yoxlayır
         Args:
-            name (str): The name of the value (used in error messages).
-            value (int): The value to validate.
-
+            name (str): Parametrin adı (həmişə string fərz edilir)
+            value (int): Yoxlanılacaq dəyər
         Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is <= 0.
+            TypeError: value integer deyilsə
+            ValueError: value <= 0 olarsa
         """
         if type(value) is not int:
-            raise TypeError(f"{name} must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
